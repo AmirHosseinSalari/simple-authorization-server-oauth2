@@ -9,7 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.Entity;
 import javax.persistence.Transient;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -32,9 +31,7 @@ public class UserClassEntity extends BaseEntity implements UserDetails {
     @Override
     @Transient
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        Set s = new HashSet();
-        s.add(new MyGrant());
-        return s;
+        return null;
     }
 
     @Override
